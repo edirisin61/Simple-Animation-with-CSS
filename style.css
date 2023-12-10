@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+}
+
+.main-outer{
+    width: 100vw;
+    height: 100vh;
+}
+
+.horizon-outer{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    background-color: rgba(44,62,80,0.8);
+    overflow: hidden;
+}
+
+.sun{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 350px;
+}
+
+
+.cloud{
+    width: 150px;
+    height: 120px;
+    position: relative;
+}
+
+.cloud-1{
+    animation: fly 15s infinite linear;
+}
+
+.cloud-2{
+    animation: fly 20s infinite linear;
+    z-index: 1;
+}
+
+.bird{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: bird 10s infinite linear;
+    z-index: 2;
+}
+
+.mount-1{
+    height: 48vh;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mount-2{
+    height: 48vh;
+    position: absolute;
+    bottom: 0;
+    left: 400px;
+    z-index: 2;
+}
+
+.mount-3{
+    height: 48vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.road-outer{
+    width: 100%;
+    height: 40vh;
+    background-color: #161b1b;
+    overflow: hidden;
+    position: relative;
+}
+
+.road-1{
+    height: 50%;
+    border-bottom: 3px dashed white;
+}
+
+.road-2{
+    height: 50%;
+    border-top: 3px dashed white;
+}
+
+.walk-outer{
+    height: 10vh;
+    background-color: #5d7274;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tree{
+    height: 120px;
+    position: relative;
+    margin-top: -100px;
+}
+
+.car-box{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    animation-name: drive-1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.car-box-1{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    animation-name: drive-2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.car{
+    height: 100%;
+}
+
+.car-1{
+    height: 100%;
+}
+
+.wheel1{
+    height: 40px;
+    width: 40px;
+    animation-name: wheel-rotate-1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wheel2{
+    height: 40px;
+    width: 40px;
+    animation-name: wheel-rotate-2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.wheel-1{
+    position: absolute;
+    bottom: 45px;
+    left: 37px;
+}
+
+.wheel-2{
+    position: absolute;
+    bottom: 45px;
+    left: 160px;
+}
+
+.wheel-3{
+    position: absolute;
+    bottom: 40px;
+    left: 35px;
+}
+
+.wheel-4{
+    position: absolute;
+    bottom: 40px;
+    left: 175px;
+}
+
+@keyframes wheel-rotate-1{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wheel-rotate-2{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes drive-1{
+    from{
+        left: -300px;
+    }
+    to{
+        left: 1300px;
+    }
+}
+
+@keyframes drive-2{
+    from{
+        right: -300px;
+    }
+    to{
+        right: 1300px;
+    }
+}
+
+@keyframes fly{
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 1300px;
+    }
+}
+
+@keyframes bird{
+    from{
+        left: -300px;
+    }
+    to{
+        left: 1300px;
+    }
+}
